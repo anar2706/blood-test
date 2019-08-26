@@ -1,0 +1,12 @@
+redis:
+  image: redis
+  ports:
+    - 6379:6379
+rabbitmq:
+  image: rabbitmq:3-management
+  environment:
+    - RABBITMQ_DEFAULT_USER=user
+    - RABBITMQ_DEFAULT_PASS=123456
+  ports:
+    - 15672:15672
+    - 5672:5672
